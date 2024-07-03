@@ -1,10 +1,11 @@
 <script lang="ts">
+  import AnimeTitle from '$lib/AnimeTitle.svelte';
   import type { PageData } from './$houdini';
   export let data: PageData;
 
   $: ({ AnimeQuery } = data);
 
-  $: console.log($AnimeQuery);
+  // $: console.log($AnimeQuery);
 </script>
 
-<h1>{$AnimeQuery?.data?.Media?.title?.english}</h1>
+<AnimeTitle animeTitle={$AnimeQuery?.data?.Media} />
