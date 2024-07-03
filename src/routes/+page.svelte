@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  import type { PageData } from './$houdini';
+  export let data: PageData;
+
+  $: ({ AnimeQuery } = data);
+
+  $: console.log($AnimeQuery);
+</script>
+
+<h1>{$AnimeQuery?.data?.Media?.title?.english}</h1>

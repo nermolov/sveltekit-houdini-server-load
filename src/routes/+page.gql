@@ -1,0 +1,9 @@
+query AnimeQuery {
+  Media(isAdult: false) {
+    title {
+      romaji
+      english
+      native
+    }
+  }
+}
