@@ -6,3 +6,6 @@
 </script>
 
 <AnimeTitle animeTitle={data?.data?.Media} />
+
+<h3>Contents of `data`</h3>
+<pre>{JSON.stringify(data, null, 2)}</pre>
