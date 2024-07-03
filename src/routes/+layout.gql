@@ -1,0 +1,7 @@
+query LayoutQuery {
+  Character(search: "Spike") {
+    name {
+      full
+    }
+  }
+}
