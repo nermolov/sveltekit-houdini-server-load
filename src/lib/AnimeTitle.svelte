@@ -14,6 +14,10 @@
       }
     `
   );
+
+  // hack workaround for https://github.com/HoudiniGraphql/houdini/issues/1314
+  $: animeTitleData = ($animeTitleFragment ??
+    animeTitle) as typeof $animeTitleFragment;
 </script>
 
-<h1>{$animeTitleFragment?.title?.english}</h1>
+<h1>{animeTitleData?.title?.english}</h1>
